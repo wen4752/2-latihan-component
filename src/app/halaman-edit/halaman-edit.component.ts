@@ -11,5 +11,8 @@ export class HalamanEditComponent implements OnInit {
 
   ngOnInit() {
   }
+  submit(){
+    
+  }
 
 }

@@ -10,14 +10,7 @@ export class AppComponent  {
 
   constructor(private router:Router){}
 
-  listJurusan = [{
-    namaJurusan: 'Informatika',
-    penjelasan: 'Belajar mengenai program'
-  },
-  {
-    namaJurusan: 'Keuangan',
-    penjelasan: 'Belajar mengenai keuangan'
-  }];
+
   
   hinput(){
     this.router.navigate(['/halaman-input']);
