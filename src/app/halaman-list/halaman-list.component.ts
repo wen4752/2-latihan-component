@@ -9,10 +9,23 @@ import { ActivatedRoute } from '@angular/router';
 export class HalamanListComponent implements OnInit {
 
   constructor(private route :ActivatedRoute) { }
-  hasil = [{}];
+  listJurusan = [{
+    namaJurusan: 'Informatika',
+    penjelasan: 'Belajar mengenai program'
+  },
+  {
+    namaJurusan: 'Keuangan',
+    penjelasan: 'Belajar mengenai keuangan'
+  }];
   ngOnInit() {
-    let list = this.route.snapshot.paramMap.get('listJurusan');
+    let jur = this.route.snapshot.paramMap.get('jur');
+    let pen = this.route.snapshot.paramMap.get('pen');
     
+    
+    this.listJurusan.push({
+      namaJurusan : jur,
+      penjelasan : pen
+    });
   }
 
 }

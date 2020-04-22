@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-halaman-input',
@@ -7,28 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HalamanInputComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
-  listJurusan = [{
-    namaJurusan: 'Informatika',
-    penjelasan: 'Belajar mengenai program'
-  },
-  {
-    namaJurusan: 'Keuangan',
-    penjelasan: 'Belajar mengenai keuangan'
-  }];
+
   inputJurusan: string;
   inputPenjelasan: string;
   submit() {
-  this.listJurusan.push({
-    namaJurusan : this.inputJurusan,
-    penjelasan: this.inputPenjelasan
-  });
 
-    
+
+    this.router.navigate(['/halaman-input', this.inputJurusan,this.inputPenjelasan]);
+
+
   }
 
 }
