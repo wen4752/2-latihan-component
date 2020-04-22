@@ -7,12 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class HelloComponent  {
   @Input() name: string;
-  listJurusan = [{
-    namaJurusan: 'Informatika',
-    penjelasan: 'Belajar mengenai program'
-  },
-  {
-    namaJurusan: 'Keuangan',
-    penjelasan: 'Belajar mengenai keuangan'
-  }];
+
 }
